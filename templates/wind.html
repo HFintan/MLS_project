@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Calculator App</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"	
+		/>
+	</head>
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Wind energy calculator</title>
+  </head>
+
+<body>
+<br>
+	<div class="container">
+		<h3>Wind energy calculator</h3>
+	</div>
+<!-- Form -->
+<br>
+    <div class="container">
+      <form action="/wind" method="POST">
+        <label for="Wind speed">Wind speed</label>
+        <input
+          type="number" step="0.0000000000001"
+          placeholder="Wind speed"
+          class="u-full-width"
+          name="num1"
+        />
+<br>
+        <label for="Operation">Degree of line of best fit:</label>
+        <select class="u-full-width" name="operation">
+          <option value="threedegree">Polynomial in degree 3</option>
+          <option value="fourdegree">Polynomial in degree 4</option>
+          <option value="sevendegree">Polynomial in degree 7</option>
+        </select>
+<br>
+        <input type="submit" value="Predict energy" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ sum }}
+        </div>
+      </form>
+
+<iframe src="https://giphy.com/embed/WSqsdbIH6mLrHe78tJ" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wind-turbines-eolien-WSqsdbIH6mLrHe78tJ">via GIPHY</a></p>
+	</body>
+</html>
