@@ -13,7 +13,7 @@
 <body>
 <br>
 	<div class="container">
-		<h3>Wind energy calculator</h3>
+		<h3>Wind Energy calculator</h3>
 	</div>
 <!-- Form -->
 <br>
@@ -28,12 +28,16 @@
         />
 <br>
         <label for="Operation">Degree of line of best fit:</label>
+<br>
         <select class="u-full-width" name="operation">
           <option value="threedegree">Polynomial in degree 3</option>
           <option value="fourdegree">Polynomial in degree 4</option>
           <option value="sevendegree">Polynomial in degree 7</option>
           <option value="tweaked">Polynomial in degree 7, with zeros removed</option>
         </select>
+<br>
+(A higher degree will have greater accuracy on average, but will take longer to compute. This difference will be imperceptible to a human, but noticeable if you are automating multiples of requests.<br>
+Further, several input values in the data set used to train this model returned an output of zero. It might be unfair to deem these as ''outliers'' in the data, as it seems equally plausible that a turbine malfunctioned, returning zero energy. Given that there is a nonzero chance of this occurring, removing these values would seem to artificially inflate the expected output value. Therefore, for completeness, the fourth option returned here has these values removed from the training set, but the others do not.)
 <br>
         <input type="submit" value="Predict energy" id="calc_btn" />
         <br />
@@ -42,6 +46,6 @@
         </div>
       </form>
 
-<!--<iframe src="https://giphy.com/embed/WSqsdbIH6mLrHe78tJ" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wind-turbines-eolien-WSqsdbIH6mLrHe78tJ">via GIPHY</a></p>-->
+<iframe src="https://giphy.com/embed/WSqsdbIH6mLrHe78tJ" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wind-turbines-eolien-WSqsdbIH6mLrHe78tJ">via GIPHY</a></p>
 	</body>
 </html>
