@@ -10,6 +10,8 @@ python3 -m flask run
 
 - Via docker
 
+docker build -t wind-app .
+
 docker run -d -p 5000:5000 wind-app
 
 
