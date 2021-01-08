@@ -56,3 +56,6 @@ def wind(sum=sum):
     else:
         console.log("FAIL")
         return render_template('wind.html')
+
+# Reference
+# https://github.com/nanoproductions/flask_calculator_basic/blob/master/templates/app.html
